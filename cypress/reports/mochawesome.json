@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-08T16:26:27.932Z",
+    "end": "2025-01-08T16:26:36.677Z",
+    "duration": 8745,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c9f7cefd-42de-485c-b80c-102432b705f0",
+      "title": "",
+      "fullFile": "cypress\\e2e\\gui\\testesE2E.cy.js",
+      "file": "cypress\\e2e\\gui\\testesE2E.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a167f978-ca55-45f7-b7d2-e44d96c9fd6d",
+          "title": "Fluxo E2E",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Criar um produto com sucesso",
+              "fullTitle": "Fluxo E2E Criar um produto com sucesso",
+              "timedOut": null,
+              "duration": 5554,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.criarProduto(\"Notebook\", \"7000\", \"preto\");\ncy.get(\".toast\").contains(\"Produto adicionado com sucesso\");\ncy.pageAccessibility();",
+              "err": {},
+              "uuid": "d3c2604e-ebf1-4194-8589-b9714cb537a3",
+              "parentUUID": "a167f978-ca55-45f7-b7d2-e44d96c9fd6d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d3c2604e-ebf1-4194-8589-b9714cb537a3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5554,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "embeddedScreenshots": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
