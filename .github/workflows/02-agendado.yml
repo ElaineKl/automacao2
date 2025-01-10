@@ -1,4 +1,4 @@
-name: "Execução manual"
+name: "Execução agendado"
 
 #Gatilho de execução manual = workflow_dispatch
 on: 
