@@ -8,7 +8,7 @@ describe('Fluxo E2E', () => {
       cy.login(usuario, senha)
       cy.url().should('eq', 'http://165.227.93.41/lojinha-web/v2/produto')
    });
-   it.only('Criar um produto com sucesso', () => {
+   it('Criar um produto com sucesso', () => {
       cy.criarProduto("Notebook", "7000", "preto")
       cy.get(".toast").contains("Produto adicionado com sucesso")
       cy.pageAccessibility()
