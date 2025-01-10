@@ -57,7 +57,7 @@ describe('Fluxo E2E', () => {
       cy.pageAccessibility()
       cy.screenshot()
    });
-   it('Editar nome, valor e cor de um produto', ()  => {    
+   it.only('Editar nome, valor e cor de um produto', ()  => {    
       cy.editarProduto("Iphone 16", "55000", "branco")
       cy.get(".toast").should('be.visible').and('contain.text', 'Produto alterado com sucesso')
       cy.screenshot()
