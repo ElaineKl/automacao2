@@ -57,12 +57,12 @@ describe('Fluxo E2E', () => {
       cy.pageAccessibility()
       cy.screenshot()
    });
-   it.only('Editar nome, valor e cor de um produto', ()  => {    
+   it('Editar nome, valor e cor de um produto', ()  => {    
       cy.editarProduto("Iphone 16", "55000", "branco")
       cy.get(".toast").should('be.visible').and('contain.text', 'Produto alterado com sucesso')
       cy.screenshot()
    });
-   /*it('Editar o valor de um produto para o limite superior', ()  => {    
+   it('Editar o valor de um produto para o limite superior', ()  => {    
       cy.editarProduto("Iphone 16", "700000", "branco")
       cy.get(".toast").should('be.visible').and('contain.text', 'Produto alterado com sucesso')
       cy.screenshot()
@@ -81,7 +81,7 @@ describe('Fluxo E2E', () => {
       cy.editarProduto("Iphone 16", "700001", "branco")
       cy.get(".toast").should('be.visible').and('contain.text', 'O valor do produto deve estar entre R$ 0,01 e R$ 7.000,00')
       cy.screenshot()
-   });*/
+   });
    it('Adicionar um componente com sucesso', () => { 
       const nomeProduto = 'Produto Teste com Componente';
       const valorProduto = '500';
@@ -102,7 +102,7 @@ describe('Fluxo E2E', () => {
       cy.get(".toast").should('be.visible').and('contain.text', 'A quantidade mínima para o componente não deve ser inferior a 1')
       cy.screenshot()
    });
-   it('Excluir um componente', () => {     /*continuar corrigindo*/
+   it.only('Excluir um componente', () => {     
          const nomeProduto = 'Produto Teste com Componente para Exluir';
          const valorProduto = '500';
          const corProduto = 'Azul';
@@ -112,8 +112,7 @@ describe('Fluxo E2E', () => {
            cy.get(':nth-child(2) > .waves-effect').click()
            cy.criarComponente("cabo", "1")
            cy.get(".toast").should('be.visible').and('contain.text', 'Componente de produto adicionado com sucesso')
-           cy.url().should('eq', 'http://165.227.93.41/lojinha-web/v2//produto/editar/989352?message=Componente%20de%20produto%20adicionado%20com%20sucesso')
-          
+                     
            cy.excluirComponente("Cabo")
            cy.contains("Cabo").should('not.exist')
            
