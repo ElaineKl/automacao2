@@ -102,7 +102,7 @@ describe('Fluxo E2E', () => {
       cy.get(".toast").should('be.visible').and('contain.text', 'A quantidade mínima para o componente não deve ser inferior a 1')
       cy.screenshot()
    });
-   it.only('Excluir um componente', () => {     
+   it('Excluir um componente', () => {     
          const nomeProduto = 'Produto Teste com Componente para Exluir';
          const valorProduto = '500';
          const corProduto = 'Azul';
