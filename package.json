@@ -10,12 +10,13 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@faker-js/faker": "^9.3.0",
+    "@faker-js/faker": "^9.4.0",
     "cypress-mochawesome-reporter": "^3.8.2"
   },
   "dependencies": {
     "cypress-axe": "^1.5.0",
     "cypress-axe-core": "^2.0.0",
+    "cypress-plugin-api": "^2.11.2",
     "mochawesome": "^7.1.3"
   }
 }

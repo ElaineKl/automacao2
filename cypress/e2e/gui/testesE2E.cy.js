@@ -60,16 +60,19 @@ describe('Fluxo E2E', () => {
    it('Editar nome, valor e cor de um produto', ()  => {    
       cy.editarProduto("Iphone 16", "55000", "branco")
       cy.get(".toast").should('be.visible').and('contain.text', 'Produto alterado com sucesso')
+      cy.visit("http://165.227.93.41/lojinha-web/v2/produto")
       cy.screenshot()
    });
    it('Editar o valor de um produto para o limite superior', ()  => {    
       cy.editarProduto("Iphone 16", "700000", "branco")
       cy.get(".toast").should('be.visible').and('contain.text', 'Produto alterado com sucesso')
+      cy.visit("http://165.227.93.41/lojinha-web/v2/produto")
       cy.screenshot()
    });
    it('Editar o valor de um produto para o limite inferior', ()  => {    
       cy.editarProduto("Iphone 16", "001", "branco")
       cy.get(".toast").should('be.visible').and('contain.text', 'Produto alterado com sucesso')
+      cy.visit("http://165.227.93.41/lojinha-web/v2/produto")
       cy.screenshot()
    });
    it('Editar o valor de um produto para fora do limite inferior', ()  => {    
@@ -103,7 +106,7 @@ describe('Fluxo E2E', () => {
       cy.screenshot()
    });
    it('Excluir um componente', () => {     
-         const nomeProduto = 'Produto Teste com Componente para Exluir';
+         const nomeProduto = 'Produto Teste com Componente para Excluir';
          const valorProduto = '500';
          const corProduto = 'Azul';
            
